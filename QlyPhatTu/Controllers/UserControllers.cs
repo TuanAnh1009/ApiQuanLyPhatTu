@@ -73,6 +73,7 @@ namespace QlyPhatTu.Controllers
             Response.Cookies.Append("token", token, new CookieOptions
             {
                 HttpOnly = true,
+                Expires = DateTime.UtcNow.AddMinutes(20)
             });
             return Ok(new
             {
