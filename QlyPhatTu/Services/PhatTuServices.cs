@@ -113,7 +113,7 @@ namespace QlyPhatTu.Services
                 {
                     throw new Exception("Not exists");
                 }
-                if (appDbContext.PhatTu.Any(x => x.Email == dto.Email))
+                if (appDbContext.PhatTu.Any(x => x.Email == dto.Email && x.PhatTuId != dto.PhatTuId))
                 {
                     throw new Exception("Email already exists");
                 }
