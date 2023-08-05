@@ -31,7 +31,7 @@ namespace QlyPhatTu.Controllers
         }
 
         [HttpGet("listphattu")]
-        //[Authorize(Roles = "ADMIN")]
+        [Authorize(Roles = "ADMIN")]
         public IActionResult GetPhatTu([FromQuery] string? ten,
             [FromQuery] string? phapdanh = null,
             [FromQuery] string? email = null,
